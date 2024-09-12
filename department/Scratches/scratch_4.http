@@ -1,0 +1,8 @@
+POST http://localhost:8082/api/department
+Content-Type: application/json
+
+{
+  "description": "test",
+  "code": "abc",
+  "name": "bla"
+}
