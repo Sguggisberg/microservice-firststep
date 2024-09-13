@@ -1,7 +1,6 @@
 package spring.microservice.first.step.department.service;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import spring.microservice.first.step.department.dto.DepartmentDto;
 import spring.microservice.first.step.department.entity.Department;
@@ -29,6 +28,18 @@ public class DepartmentServiceImpl implements DepartmentService{
             .code(savedDepartmant.getCode())
             .name(savedDepartmant.getName())
             .id(savedDepartmant.getId())
+            .build();
+    }
+
+    @Override
+    public DepartmentDto getDepartmentByCode(String code) {
+        Department department = departmentRepository.findDepartmentByCode(code);
+
+        return DepartmentDto.builder()
+            .description(department.getDescription())
+            .code(department.getCode())
+            .name(department.getName())
+            .id(department.getId())
             .build();
     }
 }
