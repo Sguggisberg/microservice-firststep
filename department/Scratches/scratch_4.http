@@ -10,3 +10,18 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8082/api/department/abc
+
+
+###
+POST http://localhost:8081/api/employee
+Content-Type: application/json
+
+{
+  "email": "abc@abc.ch",
+  "firstName": "Marc",
+  "lastName": "Müller"
+}
+
+###
+
+GET http://localhost:8081/api/employee/1
