@@ -19,7 +19,8 @@ Content-Type: application/json
 {
   "email": "abc@abc.ch",
   "firstName": "Marc",
-  "lastName": "Müller"
+  "lastName": "Müller",
+  "departmentCode": "abc"
 }
 
 ###

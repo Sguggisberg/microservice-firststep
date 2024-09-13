@@ -17,10 +17,12 @@ import lombok.Setter;
 @Entity
 @Builder
 public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
+    private String departmentCode;
 }
